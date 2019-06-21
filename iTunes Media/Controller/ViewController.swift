@@ -32,6 +32,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         // Do any additional setup after loading the view.
     }
     
+    //Setup table View Method
     func setupTableView() {
         tableview.delegate = self
         tableview.dataSource = self
@@ -48,6 +49,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             ])
     }
     
+    //TableView Delegate methods
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return store.applemusic.count
@@ -63,6 +65,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.imageView!.image = store.images[indexPath.row]
         cell.detailTextLabel?.text = musicData.album
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
     }
 }
 
