@@ -9,9 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    //Constants
+    let store = DataStore.sharedInstance
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        store.getMusic {
+            print("data fetched")
+        }
         // Do any additional setup after loading the view.
     }
 
