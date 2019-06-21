@@ -59,11 +59,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         let musicData = store.applemusic[indexPath.row]
         
-        cell.textLabel?.text = "artist"
+        cell.textLabel?.text = musicData.artist
         cell.imageView!.image = store.images[indexPath.row]
-        cell.detailTextLabel?.text = "album" 
+        cell.detailTextLabel?.text = musicData.album
         return cell
     }
-
 }
 

@@ -26,7 +26,7 @@ struct APIClient {
             
             do {
                 let responseJSON = try JSONSerialization.jsonObject(with: unwrappedDAta, options: []) as? iTunesMediaJSON
-                print(responseJSON!)
+                //print(responseJSON!)
                 completion(responseJSON)
             } catch {
                 print("Could not get API data. \(error), \(error.localizedDescription)")
